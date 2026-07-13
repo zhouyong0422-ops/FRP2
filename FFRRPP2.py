@@ -181,7 +181,7 @@ def get_reverse_valid_variants(start_idx, sequences):
         all_passed = True
         for rv in raw_variants:
             comp = reverse_complement(rv)
-            if (!is_hard_valid_oligo(comp, False)):
+            if not is_hard_valid_oligo(comp, False):
                 all_passed = False
                 break
             final_variants.append(comp)
